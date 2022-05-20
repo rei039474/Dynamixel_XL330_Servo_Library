@@ -69,6 +69,7 @@ NOTE: The example sketch includes the blinking of LED on the servo as an indicat
 ### [Simple Position Control with Potentiometer](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/XL330_position_control)
 
 The out-of-box servo comes with default Operating Mode(11) = 3. Position Control Mode.
+
 Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended position; 5: current-base position; 16: PWM
 
 ```XL330_position_control.ino```
@@ -84,6 +85,7 @@ The value range for [XL330 position control](https://emanual.robotis.com/docs/en
 ### [Simple PWM Control with Potentiometer](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/XL330_PWM_control)
 
 The out-of-box servo comes with default Operating Mode(11) = 3. Position Control Mode.
+
 Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended position; 5: current-base position; 16: PWM
 
 ```XL330_PWM_control.ino```
