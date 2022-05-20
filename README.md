@@ -75,7 +75,10 @@ Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended positi
 
 ```XL330_position_control.ino```
 
+I used a potentiometer as the input value in the sketch, but you can send command with vaule directly if wanted.
 
+The value range for [XL330 position control](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#goal-position116) is ```0 ~ 4095``` mapping ```0 ~ 360 [°]```  with following command line"
+```robot.setJointPosition(servoID, value);```
 
 ===============
 
@@ -85,6 +88,11 @@ The out-of-box servo comes with default Operating Mode(11) = 3. Position Control
 Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended position; 5: current-base position; 16: PWM
 
 ```XL330_PWM_control.ino```
+
+I used a potentiometer as the input value in the sketch, but you can send command with vaule directly if wanted.
+
+The value range for [XL330 PWM control](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#goal-pwm100) is ```-885 ~ 885``` with following command line"
+```robot.setJointSpeed(servoID, value);```
 
 ---------------
 
