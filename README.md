@@ -31,13 +31,13 @@ Restart Arduino IDE after. Open the XL330 example sketches to see how they work:
 
 ## Hardware
 
-Please refer to the e-manual for either [XL330-M077-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/) and [XL330-M288-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/) for detailed specifications and communication addresses from the Control Table of EEPROM Area.
+Please refer to the e-manual for either [XL330-M077-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/) or [XL330-M288-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/) for detailed specifications and communication addresses from the Control Table of EEPROM Area.
 
 ---------------
 
 ## Wiring Diagram
 
-Looking from above, with the servo head at the top, wire the left plug of the servo to:
+XL330 servos can be connected in series and controlled at once.
 
 <img src="https://emanual.robotis.com/assets/images/dxl/x/x_series_ttl_pin.png" width="30%" alt="Dynamixel XL-330 servo pinout" title="Dynamixel XL-330 servo pinout">
 
@@ -45,7 +45,7 @@ Looking from above, with the servo head at the top, wire the left plug of the se
 * PIN2: VDD (5 volts)
 * PIN3: Data Serial RX TX
 
-When connecting to a microcontroller, the servo's Data pin will be connected to both the desired RX and TX pins. Depends on the code, they can be hardware serial pins or defined software serial pins. The wiring diagram below is based on the example code provided in the library.
+When connecting to a microcontroller, the servo's Data pin will be connected to both the desired RX and TX pins. Depends on the code, they can be defined hardware serial pins or software serial pins. The wiring diagram below is based on the example code provided in the library.
 
 <img src="XL330_wiring.png" width="100%" alt="Dynamixel XL-330 servo wiring" title="Dynamixel XL-330 servo wiring">
 
@@ -53,7 +53,7 @@ When connecting to a microcontroller, the servo's Data pin will be connected to 
 
 ## Example Sketches
 
-I have included some example sketches to help setup and test your servos. **All the example sketches are made for Arduino board, if using other microcontrollers, make sure the libraries used in the sketches are compatible for your board.** For example, the ```<SoftwareSerial.h>``` does not work on Adafruit Feather Board, need to be changed to ```<HardwareSerial.h>``` and declare the RX TX pins differently.
+I have included some example sketches to help setup and test your servos. **All the example sketches are made for Arduino board, if using other microcontrollers, make sure the libraries used in the sketches are compatible for your board**. For example, the ```<SoftwareSerial.h>``` library does not work on EPS32 Board, need to be changed to ```<HardwareSerial.h>``` and declare the RX TX pins differently.
 
 
 ### Setting Servo's Serial Baud Rate & ServoID
