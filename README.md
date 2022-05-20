@@ -14,10 +14,9 @@ This is a library created to control Dynamixel XL-330 servos directly with micro
 
 <img src="XL330_Arduino.jpg" width="50%" alt="Dynamixel XL-330 servo library for microcontroller" title="Dynamixel XL-330 servo library for microcontroller">
 
-================
 
 
-## A XL-330 Servo library for Arduino
+# A XL-330 Servo library for Arduino
 
 Clone this repository into your Arduino IDE libraries folder:
 
@@ -27,17 +26,16 @@ Restart Arduino IDE after. Open the XL330 example sketches to see how they work:
 
 ``` Arduino IDE > File > Examples > XL330-master ```
 
-================
+---------------
 
 
-### Hardware
+## Hardware
 
 Please refer to the e-manual for either [XL330-M077-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/) and [XL330-M288-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/) for detailed specifications and communication addresses from the Control Table of EEPROM Area.
 
-================
+---------------
 
-
-### Wiring Diagram
+## Wiring Diagram
 
 Looking from above, with the servo head at the top, wire the left plug of the servo to:
 
@@ -51,38 +49,44 @@ When connecting to a microcontroller, the servo's Data pin will be connected to 
 
 <img src="XL330_wiring.png" width="100%" alt="Dynamixel XL-330 servo wiring" title="Dynamixel XL-330 servo wiring">
 
+---------------
 
-================
-
-### Example Sketches
+## Example Sketches
 
 I have included some example sketches to help setup and test your servos. 
 
 
-#### Setting Servo's Serial Baud Rate & ServoID
+### Setting Servo's Serial Baud Rate & ServoID
 
-The out-of-box servo comes with default Baud Rate = 57600 bps and default ServoID = 1.
+The out-of-box servo comes with default Baud Rate(8) = 57600 bps and default ServoID(7) = 1. Set up one servo at a time to desired ServoID without connecting several of them in series.
 
-Set up one servo at a time to desired ServoID without connecting several of them in series.
+```XL330_baud_rate_&_id.ino```
 
-Follow the instructions in the example sketch ```XL330_baud_rate_&_id.ino``` and change the setting based on your own needs. After uploading the sketch, remember to power-cycle the microcontroller in between setting anything.
+Follow the instructions in the example sketch and change the setting based on your own needs. After uploading the sketch, remember to power-cycle the microcontroller in between setting anything.
 
 NOTE: The example sketch includes the blinking of LED on the servo as an indicator of whether the setting successfully changes.
 
+===============
+
+### Simple Position Control with Potentiometer
+
+The out-of-box servo comes with default Operating Mode(11) = 3. Position Control Mode.
+Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended position; 5: current-base position; 16: PWM
+
+```XL330_position_control.ino```
+
+
+
+===============
+
+### Simple PWM Control with Potentiometer
+
+The out-of-box servo comes with default Operating Mode(11) = 3. Position Control Mode.
+Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended position; 5: current-base position; 16: PWM
+
+```XL330_PWM_control.ino```
+
 ---------------
-
-
-#### Simple Position Control with Potentiometer
-
-
----------------
-
-
-#### Simple PWM Control with Potentiometer
-
-
-================
-
 
 ### More information
 
