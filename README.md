@@ -13,7 +13,7 @@ This is a library created to control Dynamixel XL-330 servos directly with micro
 
 ================
 
-<img src="XL330_wire_Arduino.jpg" width="100%" alt="Dynamixel XL-330 servo library for microcontroller" title="Dynamixel XL-330 servo library for microcontroller">
+<img src="XL330_Arduino.jpg" width="50%" alt="Dynamixel XL-330 servo library for microcontroller" title="Dynamixel XL-330 servo library for microcontroller">
 
 ## A XL-330 Servo library for Arduino
 
@@ -21,10 +21,11 @@ Clone this repository into your Arduino IDE libraries folder:
 
 ``` $ cd ~/Documents/Arduino/libraries/ ```
 
-Restart Arduino IDE after. Open the example Arduino sketch to see how it works:
+Restart Arduino IDE after. Open the XL330 example sketches to see how they work:
 
-``` File > Examples > XL330 > XL330_servo_example ```
+``` Arduino IDE > File > Examples > XL330-master ```
 
+================
 
 ### Hardware
 
@@ -36,10 +37,12 @@ Restart Arduino IDE after. Open the example Arduino sketch to see how it works:
 Looking from above, with the servo head at the top, wire the left plug of the servo to:
 
 * PIN1: GND
-* PIN2: 5 volts
-* PIN3: Serial TX
+* PIN2: VCC (5 volts)
+* PIN3: Serial RX TX
 
-![Dynamixel XL-320 wiring diagram](XL320-wiring.jpg)
+<img src="https://emanual.robotis.com/assets/images/dxl/x/xl330_temp/xl330-series_product.png" width="30%" alt="Dynamixel XL-330 servo pinout" title="Dynamixel XL-330 servo pinout">
+
+================
 
 ### Setting the servo serial baud rate & servoID
 
