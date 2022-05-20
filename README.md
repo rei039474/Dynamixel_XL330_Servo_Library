@@ -40,7 +40,7 @@ Looking from above, with the servo head at the top, wire the left plug of the se
 * PIN2: VCC (5 volts)
 * PIN3: Serial RX TX
 
-<img src="https://emanual.robotis.com/assets/images/dxl/x/xl330_temp/xl330-series_product.png" width="30%" alt="Dynamixel XL-330 servo pinout" title="Dynamixel XL-330 servo pinout">
+<img src="https://emanual.robotis.com/assets/images/dxl/x/x_series_ttl_pin.png" width="30%" alt="Dynamixel XL-330 servo pinout" title="Dynamixel XL-330 servo pinout">
 
 ================
 
