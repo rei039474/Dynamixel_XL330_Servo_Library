@@ -98,7 +98,7 @@ The value range for [XL330 PWM control](https://emanual.robotis.com/docs/en/dxl/
 
 ---------------
 
-### More information
+## More information
 
 The example sketches provide the preset commands for XL330. If you want to control other settings on different addresses, check the address value from [XL330 Address Table](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#control-table-of-eeprom-area), and use the following command line with corresponding data size for the address:
 
@@ -111,5 +111,4 @@ robot.sendPacket_1byte(int id, int Address, int value);
 
 //for sending 4 bytes data 
 robot.sendPacket_4bytes(int id, int Address, int value);
-
 ```
