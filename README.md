@@ -11,9 +11,11 @@ This is a library created to control Dynamixel XL-330 servos directly with micro
 
 **It is still work in progress... not ready yet, but can be used for simple PWM and Position control.**
 
-================
 
 <img src="XL330_Arduino.jpg" width="50%" alt="Dynamixel XL-330 servo library for microcontroller" title="Dynamixel XL-330 servo library for microcontroller">
+
+================
+
 
 ## A XL-330 Servo library for Arduino
 
@@ -27,31 +29,57 @@ Restart Arduino IDE after. Open the XL330 example sketches to see how they work:
 
 ================
 
+
 ### Hardware
 
-[DYNAMIXEL XL-320 servo manual](http://support.robotis.com/en/product/dynamixel/xl-320/xl-320.htm) including specifications and message sending addresses.
-
-
-### Wiring diagram
-
-Looking from above, with the servo head at the top, wire the left plug of the servo to:
-
-* PIN1: GND
-* PIN2: VCC (5 volts)
-* PIN3: Serial RX TX
-
-<img src="https://emanual.robotis.com/assets/images/dxl/x/x_series_ttl_pin.png" width="30%" alt="Dynamixel XL-330 servo pinout" title="Dynamixel XL-330 servo pinout">
+Please refer to the e-manual for either [XL330-M077-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/) and [XL330-M288-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/) for detailed specifications and communication addresses from the Control Table of EEPROM Area.
 
 ================
 
-### Setting the servo serial baud rate & servoID
 
-We've included some example sketches to help test and setup your servos. Out of the box they're set to communicate via serial at 1Mbps, so you might want to set them down to something more managable by Arduino at 115200.
+### Wiring Diagram
 
-Follow the instructions in the sketch ```XL320_servo_set_baud_rate_or_id.ino``` and don't forget to power cycle the servos in between setting anything.
+Looking from above, with the servo head at the top, wire the left plug of the servo to:
+
+<img src="https://emanual.robotis.com/assets/images/dxl/x/x_series_ttl_pin.png" width="30%" alt="Dynamixel XL-330 servo pinout" title="Dynamixel XL-330 servo pinout">
+
+* PIN1: GND
+* PIN2: VDD (5 volts)
+* PIN3: Data Serial RX TX
+
+When connecting to a microcontroller, the Data pin will be connected to both the defined RX and TX pins. Depends on the code, they can be hardware serial pins or defined software serial pins. The wiring diagram below is based on the example code provided in the library.
+
+<img src="XL330_wiring.png" width="50%" alt="Dynamixel XL-330 servo wiring" title="Dynamixel XL-330 servo wiring">
+
+
+================
+
+### Example Sketches
+
+I have included some example sketches to help setup and test your servos. Out of the box they're set to communicate via serial at 57600 bps, so you might want to set them down to something more managable by Arduino at 115200.
+
+
+#### Setting Servo's Serial Baud Rate & ServoID
+
+Follow the instructions in the sketch ```XL330_servo_set_baud_rate_or_id.ino``` and don't forget to power cycle the servos in between setting anything.
 
 Note: when setting the ServoID, the servos default down to 9600 baud, so after you set the servoID you'll need to set the baud rate back up to 115200.
 
+---------------
+
+
+#### Simple Position Control with Potentiometer
+
+
+---------------
+
+
+#### Simple PWM Control with Potentiometer
+
+
+================
+
+
 ### More information
 
-Read more about this library on the [Hackerspace Adelaide Wiki](http://hackerspace-adelaide.org.au/wiki/Dynamixel_XL-320)
+Read more about this library on the [Hackerspace Adelaide Wiki](http://hackerspace-adelaide.org.au/wiki/Dynamixel_XL-320).
