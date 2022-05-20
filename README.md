@@ -2,15 +2,20 @@ Dynamixel XL-330
 ================
 This library is developed based on the code from [hackerspace-adelaide/XL320](https://github.com/hackerspace-adelaide/XL320). The modification is made by [Rei Lee](mailto:wl593@cornell.edu).
 
-This is a library created to control Dynamixel XL-330 directly with microcontorllers without the need of Dynamixel U2D2 USB communication converter. It has been tested with Arduino and ESP32 boards.
 
-**It is still work in progress... not ready yet, but can be used for simple control.
+This is a library created to control Dynamixel XL-330 servos directly with microcontorllers without the need of Dynamixel U2D2 USB communication converter. It works for both [XL330-M077-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/) and [XL330-M288-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/) models and has been tested with Arduino and ESP32 boards. Please refer to Dynamixel website for more info about the servos.
+
+
+<img src="[XL330_servo.jpg](https://emanual.robotis.com/assets/images/dxl/x/xl330_temp/xl330-series_product.png)" width="100%" alt="Dynamixel XL-330 servo" title="Dynamixel XL-330 servo">
+
+
+**It is still work in progress... not ready yet, but can be used for simple control.**
+
 ================
 
+<img src="XL330_wire_Arduino.jpg" width="100%" alt="Dynamixel XL-330 servo library for microcontroller" title="Dynamixel XL-330 servo library for microcontroller">
 
-<img src="XL330-arduino-library.jpg" width="100%" alt="Dynamixel XL-330 servo library for microcontroller" title="Dynamixel XL-330 servo library for microcontroller">
-
-## A Servo library for Arduino
+## A XL-330 Servo library for Arduino
 
 Clone this repository into your Arduino IDE libraries folder:
 
