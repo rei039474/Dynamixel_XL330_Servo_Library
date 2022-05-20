@@ -47,23 +47,27 @@ Looking from above, with the servo head at the top, wire the left plug of the se
 * PIN2: VDD (5 volts)
 * PIN3: Data Serial RX TX
 
-When connecting to a microcontroller, the Data pin will be connected to both the defined RX and TX pins. Depends on the code, they can be hardware serial pins or defined software serial pins. The wiring diagram below is based on the example code provided in the library.
+When connecting to a microcontroller, the servo's Data pin will be connected to both the desired RX and TX pins. Depends on the code, they can be hardware serial pins or defined software serial pins. The wiring diagram below is based on the example code provided in the library.
 
-<img src="XL330_wiring.png" width="50%" alt="Dynamixel XL-330 servo wiring" title="Dynamixel XL-330 servo wiring">
+<img src="XL330_wiring.png" width="100%" alt="Dynamixel XL-330 servo wiring" title="Dynamixel XL-330 servo wiring">
 
 
 ================
 
 ### Example Sketches
 
-I have included some example sketches to help setup and test your servos. Out of the box they're set to communicate via serial at 57600 bps, so you might want to set them down to something more managable by Arduino at 115200.
+I have included some example sketches to help setup and test your servos. 
 
 
 #### Setting Servo's Serial Baud Rate & ServoID
 
-Follow the instructions in the sketch ```XL330_servo_set_baud_rate_or_id.ino``` and don't forget to power cycle the servos in between setting anything.
+The out-of-box servo comes with default Baud Rate = 57600 bps and default ServoID = 1.
 
-Note: when setting the ServoID, the servos default down to 9600 baud, so after you set the servoID you'll need to set the baud rate back up to 115200.
+Set up one servo at a time to desired ServoID without connecting several of them in series.
+
+Follow the instructions in the example sketch ```XL330_baud_rate_&_id.ino``` and change the setting based on your own needs. After uploading the sketch, remember to power-cycle the microcontroller in between setting anything.
+
+NOTE: The example sketch includes the blinking of LED on the servo as an indicator of whether the setting successfully changes.
 
 ---------------
 
