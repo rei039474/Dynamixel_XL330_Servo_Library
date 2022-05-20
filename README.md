@@ -53,7 +53,7 @@ When connecting to a microcontroller, the servo's Data pin will be connected to 
 
 ## Example Sketches
 
-I have included some example sketches to help setup and test your servos. 
+I have included some example sketches to help setup and test your servos. **All the example sketches are made for Arduino board, if using other microcontrollers, make sure the libraries used in the sketches are compatible for your board.** For example, the ```<SoftwareSerial.h>``` does not work on Adafruit Feather Board, need to be changed to ```<HardwareSerial.h>``` and declare the RX TX pins differently.
 
 
 ### Setting Servo's Serial Baud Rate & ServoID
