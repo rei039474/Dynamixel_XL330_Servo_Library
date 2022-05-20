@@ -58,9 +58,9 @@ I have included some example sketches to help setup and test your servos.
 
 ### Setting Servo's Serial Baud Rate & ServoID
 
-The out-of-box servo comes with default Baud Rate(8) = 57600 bps and default ServoID(7) = 1. Set up one servo at a time to desired ServoID without connecting several of them in series.
+The out-of-box servo comes with default Baud Rate(8) = 57600 bps and default ServoID(7) = 1. **Set up one servo at a time to desired ServoID without connecting several of them in series.**
 
-```XL330_baud_rate_&_id.ino```
+```XL330_baud_rate_and_id.ino```
 
 Follow the instructions in the example sketch and change the setting based on your own needs. After uploading the sketch, remember to power-cycle the microcontroller in between setting anything.
 
