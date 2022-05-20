@@ -77,7 +77,8 @@ Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended positi
 
 I used a potentiometer as the input value in the sketch, but you can send command with vaule directly if wanted.
 
-The value range for [XL330 position control](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#goal-position116) is ```0 ~ 4095``` mapping ```0 ~ 360 [°]```  with following command line"
+The value range for [XL330 position control](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#goal-position116) is ```0 ~ 4095``` mapping ```0 ~ 360 [°]```  with following command line:
+
 ```robot.setJointPosition(servoID, value);```
 
 ===============
@@ -91,11 +92,24 @@ Operating Mode Options: 0: current; 1: velocity; 3: position; 4: extended positi
 
 I used a potentiometer as the input value in the sketch, but you can send command with vaule directly if wanted.
 
-The value range for [XL330 PWM control](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#goal-pwm100) is ```-885 ~ 885``` with following command line"
+The value range for [XL330 PWM control](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#goal-pwm100) is ```-885 ~ 885``` with following command line:
+
 ```robot.setJointSpeed(servoID, value);```
 
 ---------------
 
 ### More information
 
-Read more about this library on the [Hackerspace Adelaide Wiki](http://hackerspace-adelaide.org.au/wiki/Dynamixel_XL-320).
+The example sketches provide the preset commands for XL330. If you want to control other settings on different addresses, check the address value from [XL330 Address Table](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/#control-table-of-eeprom-area), and use the following command line with corresponding data size for the address:
+
+```
+//for sending 2 bytes data 
+robot.sendPacket(int id, int Address, int value);
+
+//for sending 1 byte data 
+robot.sendPacket_1byte(int id, int Address, int value);
+
+//for sending 4 bytes data 
+robot.sendPacket_4bytes(int id, int Address, int value);
+
+```
