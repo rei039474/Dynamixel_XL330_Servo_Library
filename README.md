@@ -52,7 +52,7 @@ When connecting to a microcontroller, the servo's Data pin will be connected to 
 I have included some example sketches to help setup and test your servos. **All the example sketches are made for Arduino board, if using other microcontrollers, make sure the libraries used in the sketches are compatible for your board**. For example, the ```<SoftwareSerial.h>``` library does not work on EPS32 Board, need to be changed to ```<HardwareSerial.h>``` and declare the RX TX pins differently.
 
 
-### [Setting Servo's Serial Baud Rate & ServoID](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/XL330_baud_rate_and_id)
+### [Setting Servo's Serial Baud Rate & ServoID](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/xl330_baud_rate_and_id)
 
 The out-of-box servo comes with default Baud Rate(8) = 57600 bps and default ServoID(7) = 1. 
 
@@ -66,7 +66,7 @@ NOTE: The example sketch includes the blinking of LED on the servo as an indicat
 
 ===============
 
-### [Simple Position Control with Potentiometer](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/XL330_position_control)
+### [Simple Position Control with Potentiometer](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/xl330_position_control)
 
 The out-of-box servo comes with default Operating Mode(11) = 3. Position Control Mode.
 
@@ -82,7 +82,7 @@ The value range for [XL330 position control](https://emanual.robotis.com/docs/en
 
 ===============
 
-### [Simple PWM Control with Potentiometer](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/XL330_PWM_control)
+### [Simple PWM Control with Potentiometer](https://github.com/rei039474/XL330_Microcontroller_Library/tree/master/examples/xl330_PWM_control)
 
 The out-of-box servo comes with default Operating Mode(11) = 3. Position Control Mode.
 
