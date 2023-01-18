@@ -1,6 +1,6 @@
 /*
  * Code based on:
- * Dynamixel.cpp - Ax-12+ Half Duplex USART Comunication
+ * Dynamixel.cpp - Ax-12+ Half Duplex UART Comunication
  * Copyright (c) 2011 Savage Electronics.
  * And Dynamixel Pro library for OpenCM-9.04 made by ROBOTIS, LTD.
  * And Luis G III for HelloSpoon robot (http://hellospoonrobot.com).
