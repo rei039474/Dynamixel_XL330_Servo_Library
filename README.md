@@ -7,7 +7,7 @@ This is a library created to control Dynamixel XL-330 servos directly with micro
 
 **It is still work in progress... not ready yet, but can be used for simple PWM and Position control.**
 
-<img src="https://emanual.robotis.com/assets/images/dxl/x/xl330_temp/xl330-series_product.png" width="30%" alt="Dynamixel XL-330 servo" title="Dynamixel XL-330 servo">
+<img src="DYNAMIXEL_XL330.jpg" width="30%" alt="Dynamixel XL-330 servo" title="Dynamixel XL-330 servo">
 
 <img src="XL330_Arduino.jpg" width="50%" alt="Dynamixel XL-330 servo library for microcontroller" title="Dynamixel XL-330 servo library for microcontroller">
 
