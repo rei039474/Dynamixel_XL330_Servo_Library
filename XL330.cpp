@@ -130,8 +130,11 @@ int XL330::getJointPosition(int id) {
 	this->stream->flush();
 	if (this->readPacket(buffer, 255) > 0) {
 		Packet p(buffer, 255);
-		if (p.isValid() && p.getParameterCount() >= 3) {
-			return (p.getParameter(1)) | (p.getParameter(2) << 8);
+		if (p.isValid() && p.getParameterCount() >= 3 && p.getInstruction() == 0x55) { 
+			return (p.getParameter(1)) |
+                  (p.getParameter(2) << 8) |
+                  (p.getParameter(3) << 16) |
+                  (p.getParameter(4) << 24);
 		}
 		else {
 			return -1;
