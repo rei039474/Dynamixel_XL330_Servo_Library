@@ -126,7 +126,7 @@ void XL330::TorqueOFF(int id) {
 
 int XL330::getJointPosition(int id) {
 	unsigned char buffer[255];
-	RXsendPacket(id, XL_PRESENT_POSITION, 2);
+	RXsendPacket(id, XL_PRESENT_POSITION, 4);
 	this->stream->flush();
 	if (this->readPacket(buffer, 255) > 0) {
 		Packet p(buffer, 255);
