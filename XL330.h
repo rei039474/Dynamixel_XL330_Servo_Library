@@ -106,6 +106,10 @@ public:
 	void TorqueON(int id);
 	void TorqueOFF(int id);
 
+	void setHomingOffset(int id, int value);
+	void setMaxPositionLimit(int id, int value);
+	void setMinPositionLimit(int id, int value);
+
 	int getJointPosition(int id);
 	int getJointSpeed(int id);
 	int getJointTemperature(int id);

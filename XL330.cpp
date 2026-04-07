@@ -124,6 +124,39 @@ void XL330::TorqueOFF(int id) {
 	nDelay(NANO_TIME_DELAY);
 }
 
+void XL330::setHomingOffset(int id, int value) {
+	// EEPROM address 20. Torque must be OFF to write.
+	// Adjusts home position: Present Position = Actual Position + Homing Offset.
+	// Range in Position Control Mode: -1024 ~ 1024 (about +/-90 degrees).
+	int Address = XL_HOMING_OFFSET;
+
+	sendPacket_4bytes(id, Address, value);
+	this->stream->flush();
+	nDelay(NANO_TIME_DELAY);
+}
+
+void XL330::setMaxPositionLimit(int id, int value) {
+	// EEPROM address 48. Torque must be OFF to write.
+	// Limits maximum Goal Position in Position Control Mode.
+	// Range: 0 ~ 4095. Default: 4095.
+	int Address = XL_MAX_POSITION_LIMIT;
+
+	sendPacket_4bytes(id, Address, value);
+	this->stream->flush();
+	nDelay(NANO_TIME_DELAY);
+}
+
+void XL330::setMinPositionLimit(int id, int value) {
+	// EEPROM address 52. Torque must be OFF to write.
+	// Limits minimum Goal Position in Position Control Mode.
+	// Range: 0 ~ 4095. Default: 0.
+	int Address = XL_MIN_POSITION_LIMIT;
+
+	sendPacket_4bytes(id, Address, value);
+	this->stream->flush();
+	nDelay(NANO_TIME_DELAY);
+}
+
 int XL330::getJointPosition(int id) {
 	unsigned char buffer[255];
 	RXsendPacket(id, XL_PRESENT_POSITION, 4);
